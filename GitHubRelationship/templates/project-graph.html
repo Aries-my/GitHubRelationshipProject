@@ -1,0 +1,196 @@
+<html>
+<head>
+        <meta charset="utf-8">  
+        <title>graph-project</title>  
+  </head> 
+
+<style type="text/css">
+path.link {  
+  fill: none;  
+  stroke: #666;  
+  stroke-width: 1.5px;  
+}  
+  
+marker#collaborate {  
+  fill: green;  
+}  
+marker#commit {  
+  fill: black;  
+} 
+  
+path.link.collaboration {  
+  stroke: green;  
+}  
+  
+path.link.committer {  
+  stroke-dasharray: 0,2 1;  
+}  
+  
+circle {  
+  fill: #ccc;  
+  stroke: #333;  
+  stroke-width: 1.5px;  
+}  
+  
+text {  
+  font: 10px sans-serif;  
+  pointer-events: none;  
+}   
+  
+</style>    
+    </head>    
+    <body>    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript"> 
+
+    var res_1 = {{result_1|safe}};
+    var res_2 = {{result_2|safe}};
+        if(res_1 && res_2){
+            alert("用户不存在");
+            window.close();
+        } 
+
+        console.log(res_1);
+        console.log(res_2);
+
+        var ll = {{comm_user_list|safe}};
+        console.log(ll);
+
+        var nodes = {{ user_list|safe }} ;    
+        console.log(nodes);    
+        var edges_coll = {{ coll_edge_list|safe }} ;
+        console.log(edges_coll);
+        var edges_comm = {{ comm_edge_list|safe }} ; 
+        console.log(edges_comm);
+        var edges = {{ coll_edge_list|safe }} ; 
+        edges = edges_comm.reduce( function(coll,item){
+                    coll.push( item );
+                    return coll;
+                }, edges );
+        console.log(edges);
+        var w = 1300,  
+            h = 600;  
+  
+var force = d3.layout.force()  
+    .nodes(d3.values(nodes))  
+    .links(edges)  
+    .size([w, h])  
+    .linkDistance(60)  
+    .charge(-600)  
+    .on("tick", tick)  
+    .start();  
+  
+var svg = d3.select("body").append("svg:svg")  
+    .attr("width", w)  
+    .attr("height", h);  
+  
+//(1)创建箭头  
+svg.append("svg:defs").selectAll("marker")  
+    .data(["collaborate", "commit"])  
+    .enter().append("svg:marker")  
+    .attr("id", String)  
+    .attr("viewBox", "0 -5 10 10")  
+    .attr("refX", 15)  
+    .attr("refY", -1.5)  
+    .attr("markerWidth", 6)  
+    .attr("markerHeight", 6)  
+    .attr("stroke-width",2)//箭头宽度
+    .attr("orient", "auto")  
+  .append("svg:path")  
+    .attr("d", "M0,-5L10,0L0,5");  
+//(2)根据连线类型引用上面创建的标记  
+var path = svg.append("svg:g").selectAll("path")  
+    .data(edges_comm)  
+  .enter().append("svg:path")  
+    .attr("class", function(d) { return "link committer"; })  
+    .attr("marker-end", function(d) { return "url(#commit)"; });  
+
+
+var edges_line = svg.selectAll(".edgepath")
+    .data(force.links())
+    .enter()
+    .append("path")
+    .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          'id':function(d,i) {return 'edgepath'+i;}})
+    .style("stroke",function(d){
+         var lineColor;
+         lineColor="#A254A2";
+         return lineColor;
+     })
+    .style("pointer-events", "none")
+    .attr("marker-end", "url(#collaborate)" );//根据箭头标记的id号标记箭头
+  
+var circle = svg.append("svg:g").selectAll("circle")  
+    .data(force.nodes())  
+  .enter().append("svg:circle")  
+    .attr("r", 6)  
+    .style("fill",function(node){
+        var color;//圆圈背景色
+        color="#F9EBF9";
+        return color;
+    })
+    .style('stroke',function(node){ 
+        var color;//圆圈线条的颜色
+        color="#B43232";
+        return color;
+    })
+    .call(force.drag);  
+  
+var nodes_text = svg.append("g").selectAll("text")
+                    .data(force.nodes())
+                    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
+                    .enter()
+                    .append("text")
+                    .attr("dy", ".35em")  
+                    .attr("text-anchor", "middle")//在圆圈中加上数据  
+                    .style('fill',function(node){
+                        var color;//文字颜色
+                            color="#B43232";
+                        return color;
+                    })
+                        //直接显示文字    
+                    .text(function(d) { 
+                        return d.label; 
+                    }); 
+  
+// 使用椭圆弧路径段双向编码。  
+function tick() {  
+  //限制结点的边界
+            nodes.forEach(function(d,i){
+                d.x = d.x - 30 < 0     ? 60 : d.x ;
+                d.x = d.x + 30 > w ? w - 30 : d.x ;
+                d.y = d.y - 30 < 0      ? 60 : d.y ;
+                d.y = d.y + 30  > h ? h - 30  : d.y ;
+            });
+
+
+//(3)打点path格式是：Msource.x,source.yArr00,1target.x,target.y  
+ path.attr("d", function(d) {  
+    var dx = d.target.x - d.source.x,//增量  
+        dy = d.target.y - d.source.y,  
+        dr = Math.sqrt(dx * dx + dy * dy);  
+    return "M" + d.source.x + ","   
+    + d.source.y + "A" + dr + ","   
+    + dr + " 0 0,1 " + d.target.x + ","   
+    + d.target.y;  
+  }); 
+
+edges_line.attr('d', function(d) { 
+      var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+      return path;
+  });
+  
+  circle.attr("transform", function(d) {  
+    return "translate(" + d.x + "," + d.y + ")";  
+  });  
+  
+  nodes_text.attr("transform", function(d) {  
+    return "translate(" + d.x + "," + d.y + ")";  
+  });  
+}  
+  </script>
+		
+    </body>  
+</html>  

@@ -1,0 +1,73 @@
+数据库说明：db.sqlite3
+存储的是三种关系的节点和边的信息
+1、Follow关系
+数据来源：followers.csv，users.csv，其中包括很多字段。经过处理截取字段，得到users_new.csv，followers_new.csv
+统计：follow中的边 11616754，用户 13914686
+(1)筛选活跃用户，每个用户都有关注其他人或者被其他人关注，得到followers_nodes.csv
+统计：活跃用户 2420820
+存储follow关系中的用户经过Gephi中的社群分析算法计算之后的节点数据
+表名：GitHubRelationship_follow_nodes
+字段：id：              用户编号  （主键）
+          label：         用户的登录名
+          modularity：经过社群分析之后，得到的社区编号
+          degree：      度
+          inDegree：   入度
+          outDegree： 出度
+(2)存储follow关系中的边数据
+统计：边 11616754
+表名：GitHubRelationship_follow_edges
+字段：id：       自增长（主键）
+          target：被关注用户id
+          source：用户id
+target和source联合唯一
+(3)存储不活跃的用户
+统计：用户 11493866
+表名：GitHubRelationship_users
+字段：id：     用户编号（主键）
+          login：用户登录名
+
+2、Collaboration关系
+(1)表名：GitHubRelationship_collaborate_nodes
+字段：id：             自增长（主键）
+          project：     项目名称
+          uid：           用户编号
+          label：         用户的登录名
+          modularity：经过社群分析之后，得到的社区编号
+          degree：      度
+          inDegree：   入度
+          outDegree： 出度
+project和uid联合唯一
+(2)表名：GitHubRelationship_collaborate_edges
+字段：id：        自增长（主键）
+          project：项目名称
+          target： 被关注用户id
+          source： 用户id
+          weight：权重
+project，target，source联合唯一
+
+3、Author_Committer关系
+(1)表名：GitHubRelationship_commit_nodes
+字段：id：             自增长（主键）
+          project：     项目名称
+          uid：           用户编号
+          label：         用户的登录名
+          modularity：经过社群分析之后，得到的社区编号
+          degree：      度
+          inDegree：   入度
+          outDegree： 出度
+project和uid联合唯一
+(2)表名：GitHubRelationship_commit_edges
+字段：id：        自增长（主键）
+          project：项目名称
+          target： 被关注用户id
+          source： 用户id
+          weight：权重
+project，target，source联合唯一
+
+
+Gephi中社群分析计算：GephiFollow.java
+由于数据量大，运行时间长，需要的内存也多
+注意导入的边数和节点数，可能会出错
+节点 2420820
+边 11616754
+现在follow_nodes中存储的是错误是数据，其中计算时导入的边节点是11616736

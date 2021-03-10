@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}
+<!-- page-intro start-->
+<!-- ================ -->
+     <div class="page-intro">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <ol class="breadcrumb">
+                        <li><i class="fa fa-home pr-10"></i><a href=#>GitHub</a></li>
+                        <li class="active">社交关系圈</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- page-intro end -->
+{% endblock %}
+
+{% block search %}
+<div >
+    <section class="main-container">
+
+        <div class="container">
+            <div class="row">
+
+                <!-- main start -->
+                 <!-- ================ -->
+                <div class="main col-md-6 col-md-offset-3">
+                            
+    <form role="search" enctype="multipart/form-data" onkeydown="if(event.keyCode==13)return false;">
+        <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="请输入用户ID或登录名" id="username">
+                <i class="fa fa-search form-control-feedback" onclick="javascript:getUrl()"></i>
+        </div>
+    </form>
+
+
+                </div>
+                <!-- main end -->
+
+            </div>
+         </div>
+    </section>
+    <!-- main-container end -->
+
+ </div>
+
+{% endblock %}
+
+{% block first %}
+<div>
+    <section class="main-container">
+
+        <div class="container">
+            <div class="row">
+            <div class="main col-md-6 col-md-offset-3">
+            <div class="main col-md-12">
+<div class="owl-carousel content-slider-with-controls-bottom">
+                                <div class="testimonial clearfix">
+                                    <h2 class="title"><a href="https://github.com/tosch">Torsten Schönebaum</a></h2>
+                                    <div class="testimonial-image">
+                                        <img src="image/tosch.jpg" alt="Torsten Schönebaum" title="tosch" class="img-circle">
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <ul>
+                                            <li><a href="https://github.com/tosch/ruote-on-rails">ruote-on-rails</a></li>
+                                            <li><a href="https://github.com/tosch/fotolia">fotolia</a></li>
+                                        </ul>
+                                        <div class="testimonial-info-1">tosch</div>
+                                        <div class="testimonial-info-2">emil:torsten.schoenebaum@sage.com</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="testimonial clearfix">
+                                    <h2 class="title">Testimonial Sl</h2>
+                                    <div class="testimonial-image">
+                                        <img src="" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <p>Turpis arcu rutrum nunc, </p>
+                                        <div class="testimonial-info-1">- John Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="testimonial clearfix">
+                                    <h2 class="title">Testimonial</h2>
+                                    <div class="testimonial-image">
+                                        <img src="" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <p>Phosfluorescently e-en</p>
+                                        <div class="testimonial-info-1">- John Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="testimonial clearfix">
+                                    <h2 class="title">Testimonial </h2>
+                                    <div class="testimonial-image">
+                                        <img src="" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <p>Phosfluorescen</p>
+                                        <div class="testimonial-info-1">- John Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="testimonial clearfix">
+                                    <h2 class="title">Testimonial Slid</h2>
+                                    <div class="testimonial-image">
+                                        <img src="" alt="Jane Doe" title="Jane Doe" class="img-circle">
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <p>Phosfluor</p>
+                                        <div class="testimonial-info-1">- John Doe</div>
+                                        <div class="testimonial-info-2">By Company</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                </div>
+</div>
+</div>
+         </div>
+         </div>
+    </section>
+    <!-- main-container end -->
+
+ </div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+function getUrl() {
+    var input = document.getElementById("username").value;
+    if(input)
+        window.open("../follow-graph/?username=" + input,'newwindow');
+        
+        } 
+</script>
+{% endblock %}

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>开发者知识库</title>
+		<meta name="description" content="开发者知识库——以Github,Stackoverflow,Topcoder和CSDN为研究平台的协助软件开发的开发者知识库">
+		<meta name="author" content="北航计算机学院课题组">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../static/images/favicon.ico">
+
+		<!-- Web Fonts -->
+
+
+		<!-- Bootstrap core CSS -->
+		<link href="../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="../static/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Fontello CSS -->
+		<link href="../static/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="../static/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+		<link href="../static/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
+		<link href="../static/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="../static/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="../static/css/animations.css" rel="stylesheet">
+
+		<!-- iDea core CSS file -->
+		<link href="../static/css/style.css" rel="stylesheet">
+
+		<!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+		<link href="../static/css/skins/red.css" rel="stylesheet">
+
+		<!-- Custom css -->
+		<link href="../static/css/custom.css" rel="stylesheet">
+	</head>
+
+	<!-- body classes:
+			"boxed": boxed layout mode e.g. <body class="boxed">
+			"pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1">
+	-->
+	<body class="front">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big">开发者知识库</i></div>
+
+		<!-- page wrapper start -->
+		<!-- ================ -->
+		<div class="page-wrapper">
+
+			<!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+			<!-- ================ -->
+			<header class="header fixed clearfix">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+
+							<!-- header-left start -->
+							<!-- ================ -->
+							<div class="header-left clearfix">
+
+								<!-- logo -->
+								<div class="logo">
+									<a href="../"><img id="logo" src="../static/images/logo_red.png" alt="iDea"></a>
+								</div>
+
+								<!-- name-and-slogan -->
+								<div class="site-slogan">
+									以便利、优化软件开发过程为目标。
+								</div>
+
+							</div>
+							<!-- header-left end -->
+
+						</div>
+						<div class="col-md-9">
+
+							<!-- header-right start -->
+							<!-- ================ -->
+							<div class="header-right clearfix">
+
+								<!-- main-navigation start -->
+								<!-- ================ -->
+								<div class="main-navigation animated">
+
+									<!-- navbar start -->
+									<!-- ================ -->
+									<nav class="navbar navbar-default" role="navigation">
+										<div class="container-fluid">
+
+											<!-- Toggle get grouped for better mobile display -->
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+											</div>
+
+											<!-- Collect the nav links, forms, and other content for toggling -->
+											<div class="collapse navbar-collapse" id="navbar-collapse-1">
+												<ul class="nav navbar-nav navbar-right">
+													<li id="home" class="active">
+														<a href="index" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+													</li>
+													<!--Github mega-menu start -->
+													<li id="github" class="dropdown mega-menu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Github</a>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="row">
+																	<div class="col-md-3">
+																		<h4>查找信息</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>查找开发者</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>查找开源项目</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-md-3">
+																		<h4>开发者关系</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="../follow"><i class="icon-right-open"></i>社交关系圈</a></li>
+																			<li><a href="../collaboration"><i class="icon-right-open"></i>项目协作关系圈</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>智能推荐</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>推荐Reviewer</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐团队</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐开发资源</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>开发工具</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>Eclipse插件下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>其它工具下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>API的使用</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<!--Github mega-menu end -->
+													<!--Stackoverflow mega-menu start -->
+													<li id="stackoverflow" class="dropdown mega-menu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Stackoverflow</a>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="row">
+																	<div class="col-md-3">
+																		<h4>搜索</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>查找用户</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>查找Question</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-md-3">
+																		<h4>开发者关系</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>社交关系圈</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>问答关系圈</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>兴趣分析圈</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>智能推荐</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>推荐回答者</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>开发工具</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>Eclipse插件下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>其它工具下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>API的使用</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<!--Stackoverflow mega-menu end -->
+													<!--Topcoder mega-menu start -->
+													<li id="topcoder" class="dropdown mega-menu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder</a>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="row">
+																	<div class="col-md-3">
+																		<h4>查找信息</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>查找开发者</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>查找竞赛</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-md-3">
+																		<h4>开发者关系</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>社交关系圈</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>竞争合作关系</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>兴趣分析圈</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>智能推荐</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>推荐开发者</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐团队</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐竞赛</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>开发工具</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>Eclipse插件下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>其它工具下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>API的使用</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<!--Topcoder mega-menu end -->
+													<!--CSDN mega-menu start -->
+													<li id="csdn" class="dropdown mega-menu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">CSDN</a>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="row">
+																	<div class="col-md-3">
+																		<h4>查找信息</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>查找开发者</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>查找开源项目</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>问题解答</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>中文博客</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-md-3">
+																		<h4>用户关系分析</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>社交关系圈</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>协作关系</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>兴趣分析圈</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>智能推荐</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>推荐团队</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐问题回答者</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>推荐博客教程</a></li>
+																		</ul>
+																	</div>
+																	<div class="col-lg-3">
+																		<h4>开发工具</h4>
+																		<div class="divider"></div>
+																		<ul class="menu">
+																			<li><a href="#"><i class="icon-right-open"></i>Eclipse插件下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>其它工具下载</a></li>
+																			<li><a href="#"><i class="icon-right-open"></i>API的使用</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<!--CSDN mega-menu end -->
+												</ul>
+											</div>
+
+										</div>
+									</nav>
+									<!-- navbar end -->
+
+								</div>
+								<!-- main-navigation end -->
+
+							</div>
+							<!-- header-right end -->
+
+						</div>
+					</div>
+				</div>
+			</header>
+			</div>
+			<!-- header end -->
+			<!-- page-intro start-->
+<!-- ================ -->
+     <div class="page-intro">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <ol class="breadcrumb">
+                        <li><i class="fa fa-home pr-10"></i><a href=#>GitHub</a></li>
+                        <li class="active">社交关系圈</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- page-intro end -->
+	<div>
+    	<section class="main-container">
+
+        	<div class="container">
+            	<div class="row">
+
+                <!-- main start -->
+                 <!-- ================ -->
+                	<!-- <div class="main col-md-6 col-md-offset-3">
+                            
+                    	<form role="search" method="get" enctype="multipart/form-data">
+                                
+                         	<div class="form-group has-feedback">
+                           		<input type="text" class="form-control" placeholder="请输入用户ID或登录名"  name="username">
+                            	<i class="fa fa-search form-control-feedback"></i>
+                        	</div>
+                    	</form>
+                    
+                    
+                	</div> -->
+                <!-- main end -->
+
+           		</div>
+         	</div>
+    	</section>
+    <!-- main-container end -->
+ 	</div>
+			<div id="svg_d3" class="svg" style='width:80%;height:600px;margin:0 auto;'></div>
+
+			<!-- footer start (Add "light" class to #footer in order to enable light footer) -->
+			<!-- ================ -->
+		<div>
+			<footer id="footer">
+				<!-- .subfooter start -->
+				<!-- ================ -->
+				<div class="subfooter">
+					<div class="container">
+						<p><a href="#" target="_blank" title="开发者知识库">开发者知识库</a> 课题组 &copy; 2017.北京航空航天大学计算机学院</p>
+					</div>
+				</div>
+				<!-- .subfooter end -->
+
+			</footer>
+			<!-- footer end -->
+
+		</div>
+		<!-- page-wrapper end -->
+
+		<style type="text/css">
+
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.link.licensing {
+  stroke: green;
+}
+
+.link.follow {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 12px Microsoft YaHei;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+.linetext {
+    font-size: 12px Microsoft YaHei;
+}
+
+</style>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script type="text/javascript">      
+        var nodes = [{'inDegree': 2, 'label': 'mike', 'modularity': 1, 'outDegree': 3, 'id': 1, 'degree': 4}, {'inDegree': 1, 'label': 'marry', 'modularity': 1, 'outDegree': 2, 'id': 2, 'degree': 3}];
+           
+    var edges = [{'target': 0, 'source': 1}, {'target': 1, 'source': 0}];
+
+
+console.log(nodes);
+        console.log(edges);
+var width = 1000,
+    height = 600;
+
+
+var force = d3.layout.force()//layout将json格式转化为力学图可用的格式
+    .nodes(d3.values(nodes))//设定节点数组
+    .links(edges)//设定连线数组
+    .size([width, height])//作用域的大小
+    .linkDistance(180)//连接线长度
+    .charge(-1500)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
+    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
+    .start();//开始转换
+
+var svg = d3.select("#svg_d3").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var label_text_1 = svg.append("text")
+                            .attr("class","labeltext")
+                            .attr("x",10)
+                            .attr("y",16)
+                            .text("运动状态：开始");
+
+        var label_text_2 = svg.append("text")
+                            .attr("class","labeltext")
+                            .attr("x",10)
+                            .attr("y",40)
+                            .text("拖拽状态：结束");
+
+//箭头
+var marker=
+    svg.append("marker")
+    .attr("id", "follow")
+    .attr("markerUnits","userSpaceOnUse")
+    .attr("viewBox", "0 -5 10 10")//坐标系的区域
+    .attr("refX",32)//箭头坐标
+    .attr("refY", -1)
+    .attr("markerWidth", 12)//标识的大小
+    .attr("markerHeight", 12)
+    .attr("orient", "auto")//绘制方向，可设定为：auto（自动确认方向）和 角度值
+    .attr("stroke-width",2)//箭头宽度
+    .append("path")
+    .attr("d", "M0,-5L10,0L0,5")//箭头的路径
+    .attr('fill','#000000');//箭头颜色
+
+//设置连接线    
+var edges_line = svg.selectAll(".edgepath")
+    .data(force.links())
+    .enter()
+    .append("path")
+    .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          //'fill-opacity':0,
+          //'stroke-opacity':0,
+          //'fill':'blue',
+          //'stroke':'red',
+          'id':function(d,i) {return 'edgepath'+i;}})
+    .style("stroke",function(d){
+         var lineColor;
+         lineColor="#A254A2";
+         return lineColor;
+     })
+    .style("pointer-events", "none")
+    .style("stroke-width",0.5)//线条粗细
+    .attr("marker-end", "url(#follow)" );//根据箭头标记的id号标记箭头
+var drag = force.drag()
+                    .on("dragstart",function(d,i){
+                        d.fixed = true;    //拖拽开始后设定被拖拽对象为固定
+                        label_text_2.text("拖拽状态：开始");
+                    })
+                    .on("dragend",function(d,i){
+                        label_text_2.text("拖拽状态：结束");
+                    })
+                    .on("drag",function(d,i){
+                        label_text_2.text("拖拽状态：进行中");
+                    });
+
+//圆圈
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())//表示使用force.nodes数据
+    .enter().append("circle")
+    .style("fill",function(node){
+        var color;//圆圈背景色
+        color="#F9EBF9";
+        return color;
+    })
+    .style('stroke',function(node){ 
+        var color;//圆圈线条的颜色
+        color="#B43232";
+        return color;
+    })
+    .attr("r", 28)//设置圆圈半径
+    .on("click",function(node){
+        //单击时让连接线加粗
+        edges_line.style("stroke-width",function(line){
+            console.log(line);
+            console.log(line.source);
+            if(line.source.label==node.label || line.target.label==node.label){
+                return 4;
+            }else{
+                return 0.5;
+            }
+        });
+        //d3.select(this).style('stroke-width',2);
+    })
+    .call(drag);//将当前选中的元素传到drag函数中，使顶点可以被拖动
+    
+
+  //圆圈的提示文字
+circle.append("svg:title")  
+        .text(function(node) { 
+            return "follow:"+node.outDegree+";follower:"+node.inDegree;
+        });
+
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+    //返回缺失元素的占位对象（placeholder），指向绑定的数据中比选定元素集多出的一部分元素。
+    .enter()
+    .append("text")
+    .attr("dy", ".35em")  
+    .attr("text-anchor", "middle")//在圆圈中加上数据  
+    .style('fill',function(node){
+        var color;//文字颜色
+        color="#B43232";
+        return color;
+    })
+    //直接显示文字    
+    .text(function(d) { 
+        return d.label; 
+    });
+
+
+//力学图运动开始时
+        force.on("start", function(){
+            label_text_1.text("运动状态：开始");
+        });
+            
+        //力学图运动结束时
+        force.on("end", function(){
+            label_text_1.text("运动状态：结束");
+        });
+
+function tick() {
+  circle.attr("transform", transform1);//圆圈
+  text.attr("transform", transform2);//顶点文字
+
+
+            //修改标签文字
+            label_text_1.text("运动状态：进行中");
+
+            //限制结点的边界
+            nodes.forEach(function(d,i){
+                d.x = d.x - 30 < 0     ? 60 : d.x ;
+                d.x = d.x + 30 > width ? width - 30 : d.x ;
+                d.y = d.y - 30 < 0      ? 60 : d.y ;
+                d.y = d.y + 30  > height ? height - 30  : d.y ;
+            });
+
+
+  edges_line.attr('d', function(d) { 
+      var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+      return path;
+  });  
+    
+  
+}
+
+//设置连接线的坐标,使用椭圆弧路径段双向编码
+function linkArc(d) {
+  return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y
+}
+//设置圆圈和文字的坐标
+function transform1(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+function transform2(d) {
+      return "translate(" + (d.x) + "," + d.y + ")";
+}
+
+
+     
+        </script>  
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="../static/plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="../static/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="../static/plugins/modernizr.js"></script>
+
+		<!-- jQuery REVOLUTION Slider  -->
+		<script type="text/javascript" src="../static/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../static/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="../static/plugins/isotope/isotope.pkgd.min.js"></script>
+
+		<!-- Owl carousel javascript -->
+		<script type="text/javascript" src="../static/plugins/owl-carousel/owl.carousel.js"></script>
+
+		<!-- Magnific Popup javascript -->
+		<script type="text/javascript" src="../static/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="../static/plugins/jquery.appear.js"></script>
+
+		<!-- Count To javascript -->
+		<script type="text/javascript" src="../static/plugins/jquery.countTo.js"></script>
+
+		<!-- Parallax javascript -->
+		<script src="../static/plugins/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Contact form -->
+		<script src="../static/plugins/jquery.validate.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="../static/js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="../static/js/custom.js"></script>
+
+		<!-- D3 Scripts -->
+		<script type="text/javascript" src="../static/js/d3.js"></script>
+		<script type="text/javascript" src="../static/js/d3.min.js"></script>
+
+	</body>
+</html>
